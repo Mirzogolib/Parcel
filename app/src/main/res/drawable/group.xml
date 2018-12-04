@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="297dp"
+    android:height="297dp"
+    android:viewportWidth="297"
+    android:viewportHeight="297">
+
+    <path
+        android:fillColor="#B3143A"
+        android:strokeWidth="1"
+        android:pathData="M 297 129 L 297 163.646154 L 155.832741 231 L 116.841784 213.430769 L 98 204.953846 L 98 170.307692 L 122.409723 181.307692 L 122.425104 181.307692 L 155.832741 196.353846 Z" />
+    <path
+        android:fillColor="#32B34F"
+        android:strokeWidth="1"
+        android:pathData="M 216 30.6414687 L 160.04161 57 L 160.026199 57 L 136 46.0833693 L 189.600462 21 Z" />
+    <path
+        android:fillColor="#27A9C3"
+        android:strokeWidth="1"
+        android:pathData="M 164 10.2783552 L 112.451232 34 L 88 23.0456394 L 138.589289 0 Z" />
+    <path
+        android:fillColor="#B3143A"
+        android:strokeWidth="1"
+        android:pathData="M 297 65.5046661 L 297 99.6135014 L 155.832741 167 L 98 140.941219 L 98 106.539935 L 98.2768589 106.416798 L 98.2768589 106.416798 L 240.213171 40 L 270.88298 52.4521876 L 128.331427 119.961823 L 155.832741 132.33705 Z" />
+    <path
+        android:fillColor="#B3143A"
+        android:strokeWidth="1"
+        android:pathData="M 297 195 L 297 229.646154 L 155.832741 297 L 116.841784 279.446154 L 98 270.953846 L 98 236.307692 L 121.179239 246.753846 L 155.832741 262.353846 Z" />
+    <path
+        android:fillColor="#04356D"
+        android:strokeWidth="1"
+        android:pathData="M 76.8477936 96.3225292 L 76.8477936 261 L 50 248.842189 L 50 84.7656748 L 50.6286462 84.457492 L 108.188108 58 L 108.188108 58 L 132 69.1099894 Z" />
+    <path
+        android:fillColor="#04356D"
+        android:strokeWidth="1"
+        android:pathData="M 26.8010204 73.5138001 L 26.0204082 73.8838084 L 26.8010204 74.2383996 L 26.8010204 239 L 0 226.851395 L 0 63.1227345 L 1.13265306 62.5985561 L 26.8010204 50.7891254 L 63.3061224 34 L 87 45.3469204 Z" />
+</vector>
