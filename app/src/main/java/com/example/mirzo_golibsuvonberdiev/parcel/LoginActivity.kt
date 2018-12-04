@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             if (usName.equals(user.usernameReturn(user)) && usPass.equals(user.passwordReturn(user))) {
                 val intent = Intent(this, BaseActivity::class.java)
                 startActivity(intent)
-            } else Snackbar.make(mainLayout, "Please, check all information", Snackbar.LENGTH_SHORT).show()
+            } else Snackbar.make(mainLayout, "Please, check all information ", Snackbar.LENGTH_SHORT).show()
         })
     }
 
