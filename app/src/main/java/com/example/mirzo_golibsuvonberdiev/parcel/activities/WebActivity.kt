@@ -1,9 +1,10 @@
-package com.example.mirzo_golibsuvonberdiev.parcel
+package com.example.mirzo_golibsuvonberdiev.parcel.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import com.example.mirzo_golibsuvonberdiev.parcel.R
 import kotlinx.android.synthetic.main.activity_web.*
 
 class WebActivity : AppCompatActivity() {

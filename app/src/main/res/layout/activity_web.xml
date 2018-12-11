@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/web_layout"
-    tools:context="com.example.mirzo_golibsuvonberdiev.parcel.WebActivity">
+    tools:context="com.example.mirzo_golibsuvonberdiev.parcel.activities.WebActivity">
 
 </WebView>

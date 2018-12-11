@@ -1,9 +1,10 @@
-package com.example.mirzo_golibsuvonberdiev.parcel
+package com.example.mirzo_golibsuvonberdiev.parcel.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.mirzo_golibsuvonberdiev.parcel.R
 
 class SplashActivity : AppCompatActivity() {
 
