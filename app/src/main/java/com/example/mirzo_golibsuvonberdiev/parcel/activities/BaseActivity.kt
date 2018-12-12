@@ -16,15 +16,21 @@ import kotlinx.android.synthetic.main.activity_base.*
 
 
 class BaseActivity : AppCompatActivity() {
+
     //initializing Service
     val apiService = Service().retrofit.create(ServiceInterface::class.java)
 
+    val auth = intent.extras["auth"]
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
 
+        Log.d("CHECK", "Auth is " + auth)
+
         getCustomer()
+
+        getParcel()
 
         qrcode_button.setOnClickListener({
             val inegator = IntentIntegrator(this)
@@ -59,9 +65,9 @@ class BaseActivity : AppCompatActivity() {
     }
 
 
-//getting Customer using retrofit
-    fun getCustomer(){
-        apiService.getParcelList()
+    //getting Customer using retrofit
+    fun getCustomer() {
+        apiService.getCustomerList()
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -77,5 +83,27 @@ class BaseActivity : AppCompatActivity() {
                     Log.d("CHECK", " failed to access ")
                 })
     }
+
+
+    //getting Parcel using retrofit
+    fun getParcel() {
+        val header = "Bearer " + auth
+        apiService.getParcelList(header)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    Toast.makeText(applicationContext, " " + it.results[1].sender, Toast.LENGTH_SHORT)
+                    Log.d("CHECK", " " + it.results.size)
+                    for (i in 0..it.results.size) {
+                        Log.d("CHECK", " " + it.results[i].code)
+                        Log.d("CHECK", " " + it.results[i].note)
+                    }
+
+                }, {
+                    Log.d("CHECK", " failed to access ")
+                })
+    }
+
 
 }

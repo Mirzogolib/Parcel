@@ -6,7 +6,8 @@ import com.google.gson.annotations.SerializedName
  * Created by mirzo-golibsuvonberdiev on 12/7/18.
  */
 data class ParcelItem(
-        val id: Int =0,
-        val first_name: String?=null,
-        val last_name:String?=null
+        val sender: Int =0,
+        val receiver: Int =0,
+        val code: String?=null,
+        val note:String?=null
 )

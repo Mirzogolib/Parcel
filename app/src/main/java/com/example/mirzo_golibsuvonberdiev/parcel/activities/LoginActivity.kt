@@ -41,7 +41,9 @@ class LoginActivity : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ result ->
                     Log.d("CHECK", " " + result.access)
+                    val auth :String = result.access!!
                     val intent = Intent(this, BaseActivity::class.java)
+                    intent.putExtra("auth", auth)
                     startActivity(intent)
                 }, { error ->
                     error.printStackTrace()
