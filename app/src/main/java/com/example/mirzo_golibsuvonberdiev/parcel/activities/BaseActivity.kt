@@ -20,17 +20,16 @@ class BaseActivity : AppCompatActivity() {
     //initializing Service
     val apiService = Service().retrofit.create(ServiceInterface::class.java)
 
-    val auth = intent.extras["auth"]
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
-
+        val auth = intent.extras["auth"]
         Log.d("CHECK", "Auth is " + auth)
 
         getCustomer()
 
-        getParcel()
+        getParcel(auth as String)
 
         qrcode_button.setOnClickListener({
             val inegator = IntentIntegrator(this)
@@ -86,7 +85,7 @@ class BaseActivity : AppCompatActivity() {
 
 
     //getting Parcel using retrofit
-    fun getParcel() {
+    fun getParcel(auth: String) {
         val header = "Bearer " + auth
         apiService.getParcelList(header)
                 .subscribeOn(Schedulers.io())
