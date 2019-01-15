@@ -24,6 +24,14 @@
         android:background="@color/colorPrimaryDark"
         android:text="Web view"
         android:textColor="#ffff" />
+    <Button
+        android:id="@+id/customer_list_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Customers list"
+        android:textColor="#ffff" />
 
 
     <TextView

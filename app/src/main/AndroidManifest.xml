@@ -23,7 +23,9 @@
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.BaseActivity" />
         <activity android:name=".activities.WebActivity" />
-        <activity android:name=".BarcodeCaptureActivity"></activity>
+        <activity android:name=".BarcodeCaptureActivity" />
+        <activity android:name=".activities.CustemersListActivity" />
+        <activity android:name=".activities.CustomerInfoActivity"></activity>
     </application>
 
 </manifest>

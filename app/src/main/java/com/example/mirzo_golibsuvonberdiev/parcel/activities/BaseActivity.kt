@@ -47,6 +47,14 @@ class BaseActivity : AppCompatActivity() {
             val intent = Intent(this@BaseActivity, WebActivity::class.java)
             startActivity(intent)
         })
+
+
+        customer_list_button.setOnClickListener(
+                {
+                    val intent = Intent (this, CustemersListActivity::class.java)
+                    startActivity(intent)
+                }
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -71,7 +79,7 @@ class BaseActivity : AppCompatActivity() {
                 .unsubscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    Toast.makeText(applicationContext, " " + it.results[1].id, Toast.LENGTH_SHORT)
+                    Toast.makeText(applicationContext, " " + it.results[1].id, Toast.LENGTH_SHORT).show()
                     Log.d("CHECK", " " + it.results.size)
                     for (i in 0..it.results.size) {
                         Log.d("CHECK", " " + it.results[i].first_name)
@@ -103,6 +111,7 @@ class BaseActivity : AppCompatActivity() {
                     Log.d("CHECK", " failed to access ")
                 })
     }
+
 
 
 }
