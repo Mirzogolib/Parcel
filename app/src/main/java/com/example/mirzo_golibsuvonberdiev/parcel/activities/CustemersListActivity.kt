@@ -1,5 +1,6 @@
 package com.example.mirzo_golibsuvonberdiev.parcel.activities
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -36,8 +37,6 @@ class CustemersListActivity : AppCompatActivity() {
                     val adapter = CustomerAdapter(this, it.results)
                     recView.adapter = adapter
 
-
-
                 }, {
                     Log.d("CHECK", " failed to access ")
 
@@ -48,3 +47,4 @@ class CustemersListActivity : AppCompatActivity() {
 
 
 }
+

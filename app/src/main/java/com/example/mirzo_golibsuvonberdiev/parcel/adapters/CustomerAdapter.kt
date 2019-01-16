@@ -17,6 +17,7 @@ import com.example.mirzo_golibsuvonberdiev.parcel.R
 import com.example.mirzo_golibsuvonberdiev.parcel.activities.CustomerInfoActivity
 import com.example.mirzo_golibsuvonberdiev.parcel.models.Customer
 import kotlinx.android.synthetic.main.customer_item.view.*
+import java.io.Serializable
 
 /**
  * Created by mirzo-golibsuvonberdiev on 1/15/19.
@@ -39,6 +40,7 @@ class CustomerAdapter(private val context: Context,
         holder?.view.setOnClickListener({
           Toast.makeText(context, "You have clicked to "+customer.first_name, Toast.LENGTH_SHORT).show()
             val intent = Intent(context, CustomerInfoActivity::class.java)
+            intent.putExtra("customer", customer)
             context.startActivity(intent)
         })
 

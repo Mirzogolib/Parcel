@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.mirzo_golibsuvonberdiev.parcel.R
 import com.example.mirzo_golibsuvonberdiev.parcel.interfaces.ServiceInterface
+import com.example.mirzo_golibsuvonberdiev.parcel.models.Customer
 import com.example.mirzo_golibsuvonberdiev.parcel.services.Service
 import com.google.zxing.integration.android.IntentIntegrator
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -51,6 +52,7 @@ class BaseActivity : AppCompatActivity() {
 
         customer_list_button.setOnClickListener(
                 {
+
                     val intent = Intent (this, CustemersListActivity::class.java)
                     startActivity(intent)
                 }
